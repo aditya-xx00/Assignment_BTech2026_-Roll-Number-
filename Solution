@@ -1,0 +1,7 @@
+Solution of the Problem
+
+ SELECT salary from worker w1
+       where 4=( select count(DISTINCT (w2.salary))
+        from worker w2
+        where w2.salary>=w1.salary
+        );
